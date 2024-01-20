@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 11:54:34 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/20 14:08:03 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/20 15:30:48 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ Dog::~Dog(void)
 
 Dog::Dog(Dog const &copy) : Animal(copy)
 {
-	brain = new Brain();
-	*brain = *copy.brain;
+	brain = new Brain(*copy.brain);
+	type = copy.type;
 	std::cout << "Dog" << CPYCONSTRUCTOR << std::endl;
 }
 

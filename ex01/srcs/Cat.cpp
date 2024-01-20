@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 11:54:35 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/20 14:14:26 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/20 15:29:52 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,7 @@ Cat::~Cat(void)
 
 Cat::Cat(Cat const &copy) : Animal(copy)
 {
-	brain = new Brain();
-	*brain = *copy.brain;
+	brain = new Brain(*copy.brain);
 	type = copy.type;
 	std::cout << "Cat" << CPYCONSTRUCTOR << std::endl;
 }
