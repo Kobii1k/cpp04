@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   main.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/13 11:56:12 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/20 13:57:07 by mgagne           ###   ########.fr       */
+/*   Created: 2024/01/13 11:57:24 by mgagne            #+#    #+#             */
+/*   Updated: 2024/01/14 18:44:05 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-	#define ANIMAL_HPP
+#ifndef MAIN_H
+	#define MAIN_H
 
-	#include "main.h"
+	#include <iostream>
+	#include <string>
 
-	class Animal
-	{
-	protected:
-		std::string		type;
-	public:
-						Animal(void);
-						virtual ~Animal(void);
-						Animal(Animal const &copy);
-		Animal const    &operator=(Animal const &copy);
-		virtual	void	makeSound(void) const;
-		std::string		getType(void) const;
-	};
+	#define CONSTRUCTOR ": Constructor called"
+	#define DESTRUCTOR ": Destructor called"
+	#define CPYCONSTRUCTOR ": Copy Constructor called"
+
 #endif

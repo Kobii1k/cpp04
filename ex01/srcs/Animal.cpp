@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 11:54:36 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/20 13:57:00 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/20 13:40:50 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,16 @@ void	Animal::makeSound(void) const
 std::string		Animal::getType(void) const
 {
 	return (type);
+}
+
+std::string		Animal::getIdea(unsigned int index) const
+{
+	(void) index;
+	return ("no brain here..");
+}
+
+void			Animal::setIdea(std::string idea, unsigned int index) const
+{
+	(void) idea;
+	(void) index;
 }

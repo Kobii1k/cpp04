@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/13 11:54:35 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/20 13:57:32 by mgagne           ###   ########.fr       */
+/*   Created: 2024/01/13 11:54:29 by mgagne            #+#    #+#             */
+/*   Updated: 2024/01/20 12:58:33 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 
-Cat::Cat(void)
+WrongCat::WrongCat(void)
 {
-	type = "Cat";
-	std::cout << "Cat" << CONSTRUCTOR << std::endl;
+	type = "WrongCat";
+	std::cout << "WrongCat" << CONSTRUCTOR << std::endl;
 }
 
-Cat::~Cat(void)
+WrongCat::~WrongCat(void)
 {
-	std::cout << "Cat" << DESTRUCTOR << std::endl;
+	std::cout << "WrongCat" << DESTRUCTOR << std::endl;
 }
 
-Cat::Cat(Cat const &copy) : Animal(copy)
+WrongCat::WrongCat(WrongCat const &copy) : WrongAnimal(copy)
 {
 	*this = copy;
-	std::cout << "Cat" << CPYCONSTRUCTOR << std::endl;
+	std::cout << "WrongCat" << CPYCONSTRUCTOR << std::endl;
 }
 
-Cat const    &Cat::operator=(Cat const &copy)
+WrongCat const    &WrongCat::operator=(WrongCat const &copy)
 {
 	this->type = copy.type;
 	return (*this);
 }
 
-void	Cat::makeSound(void) const
+void	WrongCat::makeSound(void)
 {
-	std::cout << "*meow.. meow!*" << std::endl;
+	std::cout << "*wrong meow.. wrong meow!*" << std::endl;
 }

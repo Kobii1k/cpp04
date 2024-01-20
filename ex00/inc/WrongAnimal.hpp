@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 11:56:18 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/13 12:02:17 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/20 13:59:14 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,18 @@
 	#define WRONGANIMAL_HPP
 
 	#include "main.h"
-	#include "WrongAnimal.hpp"
 
 	class WrongAnimal
 	{
 	protected:
-	private:
+		std::string		type;
 	public:
+							WrongAnimal(void);
+							virtual	~WrongAnimal(void);
+							WrongAnimal(WrongAnimal const &copy);
+		WrongAnimal const	&operator=(WrongAnimal const &copy);
+		void				makeSound(void);
+		std::string			getType(void);
 	};
+
 #endif

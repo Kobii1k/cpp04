@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/13 11:56:12 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/20 13:57:07 by mgagne           ###   ########.fr       */
+/*   Created: 2024/01/13 11:56:14 by mgagne            #+#    #+#             */
+/*   Updated: 2024/01/20 13:40:38 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-	#define ANIMAL_HPP
+#ifndef CAT_HPP
+	#define CAT_HPP
 
-	#include "main.h"
+	#include "Animal.hpp"
+	#include "Brain.hpp"
 
-	class Animal
+	class Cat : public Animal
 	{
-	protected:
-		std::string		type;
+	private:
+		Brain	*brain;
 	public:
-						Animal(void);
-						virtual ~Animal(void);
-						Animal(Animal const &copy);
-		Animal const    &operator=(Animal const &copy);
-		virtual	void	makeSound(void) const;
-		std::string		getType(void) const;
+						Cat(void);
+						~Cat(void);
+						Cat(Cat const &copy);
+		Cat const		&operator=(Cat const &copy);
+		void			makeSound(void) const;
+		std::string		getIdea(unsigned int index) const;
+		void			setIdea(std::string idea, unsigned int index) const;
 	};
 #endif

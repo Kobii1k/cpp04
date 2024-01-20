@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 11:54:36 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/20 13:57:00 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/20 14:22:53 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,6 @@ Animal const    &Animal::operator=(Animal const &copy)
 {
 	this->type = copy.type;
 	return (*this);
-}
-
-void	Animal::makeSound(void) const
-{
-	std::cout << "*random animal noise*" << std::endl;
 }
 
 std::string		Animal::getType(void) const

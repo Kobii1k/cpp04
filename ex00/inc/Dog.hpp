@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 11:56:16 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/14 19:01:15 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/20 13:56:52 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@
 						~Dog(void);
 						Dog(Dog const &copy);
 		Dog const		&operator=(Dog const &copy);
-		void			makeSound(void);
+		void			makeSound(void) const;
 	};
 #endif
